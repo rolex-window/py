@@ -1,0 +1,53 @@
+Code:****************************************************************************************
+List1 = []
+size1=int(input("Enter the size of list 1:"))
+
+for i in range(size1):
+    num1=(input("Enter List1 element :"))
+    List1.append(num1)
+
+print("List 1:", List1)
+
+Output:
+Enter the size of list 1: 5
+Enter List1 element : 11
+Enter List1 element : 12
+Enter List1 element : 13
+Enter List1 element : 14
+Enter List1 element : 15
+List 1: ['11', '12', '13', '14', '15']
+------------------------------------------------------------------------------------------------
+Code:
+
+List2 = []
+size2=int(input("Enter the size of list 2:"))
+
+for i in range(size2):
+    num2=(input("Enter List1 element :"))
+    List2.append(num2)
+
+print("List 2:", List2)
+
+Output:
+Enter the size of list 2: 5
+Enter List1 element : 13
+Enter List1 element : 14
+Enter List1 element : 15
+Enter List1 element : 16
+Enter List1 element : 17
+List 2: ['13', '14', '15', '16', '17']
+------------------------------------------------------------------------------------------------
+Code:
+
+List3 =[]
+for item1 in List1:
+    for item2 in List2:
+        if item1 == item2:
+            ist3.append(item1)
+            break
+print("Intersection of the two lists:", List3,"\nList1",List1,"\nList2",List2)
+
+Output:
+Intersection of the two lists: ['13', '14', '15']
+List1 ['11', '12', '13', '14', '15']
+List2 ['13', '14', '15', '16', '17']

@@ -1,0 +1,87 @@
+Code:
+
+keys=[]
+values=[]
+n=int(input("Enter number of elements for dictionary:"))
+print("For keys:")
+for x in range(0,n):
+    lement=int(input("Enter element" + str(x+1) + ":"))
+    keys.append(element)
+print("For values:")
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    values.append(element)
+d=dict(zip(keys,values))
+print("The dictionary is:")
+print(d)
+
+
+Output:
+Enter number of elements for dictionary:5
+For keys:
+Enter element1:1
+Enter element2:2
+Enter element3:3
+Enter element4:4
+Enter element5:5
+For values:
+Enter element1:6
+Enter element2:7
+Enter element3:8
+Enter element4:9
+Enter element5:10
+The dictionary is:{1: 6, 2: 7, 3: 8, 4: 9, 5: 10}
+********************************************************************************************************
+Code:
+
+list1 = []
+list2 = []
+n = int(input("Enter number of elements for dictionary: "))
+print("For keys:")
+for x in range(0, n):
+    element = int(input("Enter element " + str(x + 1) + ": "))
+    list1.append(element)
+print("For values:")
+for x in range(0, n):
+    element = int(input("Enter element " + str(x + 1) + ": "))
+    list2.append(element)
+result = {key: value for key, value in zip(list1, list2)}
+print(result)
+
+
+Output:
+Enter number of elements for dictionary:5
+For keys:
+Enter element1:1
+Enter element2:2
+Enter element3:3
+Enter element4:4
+Enter element5:5
+For values:
+Enter element1:6
+Enter element2:7
+Enter element3:8
+Enter element4:9
+Enter element5:10
+The dictionary is:{1: 6, 2: 7, 3: 8, 4: 9, 5: 10}
+***********************************************************************************************************
+Code:
+
+my_list = []
+n = int(input("Enter the number of elements for the dictionary: "))
+for x in range(0, n):
+    element = int(input("Enter element " + str(x + 1) + ": "))
+    my_list.append(element)
+result = {item: index for index, item in enumerate(my_list)}
+print(result)
+
+
+Output:
+Enter the number of elements for the dictionary: 5
+Enter element 1: 12
+Enter element 2: 13
+Enter element 3: 15
+Enter element 4: 16
+Enter element 5: 14
+{12: 0, 13: 1, 15: 2, 16: 3, 14: 4}
+***********************************************************************************************************

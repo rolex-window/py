@@ -1,0 +1,73 @@
+Program : For remove i th occurrence
+
+def remove_word(list,word,i):
+    count = 0
+    index = 0
+
+    for j in list :
+     index += 1
+     if j == word :
+        count += 1
+        if count == i:
+            list.pop(index-1)
+    return list
+
+list = ['she','i','she','do','svkm','she','svkm']
+print("List is ",list)
+w = 'she'
+n = 1
+print("List after Remove element ",remove_word(list,w,n))
+
+Output:
+List is ['she', 'i', 'she', 'do', 'svkm', 'she', 'svkm']
+List after Remove element ['i', 'she', 'do', 'svkm', 'she', 'svkm']
+***********************************************************************************************
+Program : For delete odd occurrence
+
+def remove_word_odd(list1,word,i):
+    count = 0
+    index = 0
+
+    for j in list1 :
+        index += 1
+        if j == word :
+            count += 1
+            if count%2 != 0:
+                list1.pop(index-1)
+    return list1
+
+list1 = ['she','i','she','do','svkm','she','svkm']
+print("List is ",list1)
+ww = 'she'
+nn = 1
+print("List after Remove element ",remove_word_odd(list1,ww,nn))
+
+Output:
+
+List is ['she', 'i', 'she', 'do', 'svkm', 'she', 'svkm']
+List after Remove element ['i', 'she', 'do', 'svkm', 'svkm']
+************************************************************************************************
+Program : For Even Occurrence delete
+
+def remove_word_odd(list1,word,i):
+    count = 0
+    index = 0
+
+    for j in list1 :
+        index += 1
+        if j == word :
+            count += 1
+            if count%2 == 0:
+                list1.pop(index-1)
+    return list1
+
+list1 = ['she','i','she','do','svkm','she','svkm']
+print("List is ",list1)
+ww = 'she'
+nn = 1
+print("List after Remove element ",remove_word_odd(list1,ww,nn))
+
+Output:
+
+List is ['she', 'i', 'she', 'do', 'svkm', 'she', 'svkm']
+List after Remove element ['she', 'i', 'do', 'svkm', 'she', 'svkm']

@@ -1,0 +1,108 @@
+1)Method 1 : Using + Operator-----------------------------------------------------------------
+List1 = []
+size1=int(input("Enter the size of list 1:"))
+
+for i in range(size1):
+    num1=(input("Enter List1 element :"))
+    List1.append(num1)
+
+print("List 1:", List1)
+
+Output:
+Enter the size of list 1: 5
+Enter List1 element : 11
+Enter List1 element : 12
+Enter List1 element : 13
+Enter List1 element : 14
+Enter List1 element : 15
+
+List 1: ['11', '12', '13', '14', '15']
+*********************************************************************************************
+code::
+List2 = []
+size2=int(input("Enter the size of list 2:"))
+
+for i in range(size2):
+    num2=(input("Enter List1 element :"))
+    List2.append(num2)
+
+print("List 2:", List2)
+
+Output:
+Enter the size of list 2: 5
+Enter List1 element : 13
+Enter List1 element : 14
+Enter List1 element : 15
+Enter List1 element : 16
+Enter List1 element : 17
+List 2: ['13', '14', '15', '16', '17']
+*********************************************************************************************
+Code:
+
+result = List1 + List2
+print("Concatenation of List 1 and List 2 using + Operator",result,"\nList1",List1,"\nList2",List2)
+
+Output:
+Concatenation of List 1 and List 2 using + Operator ['11', '12', '13', '14', '15', '13', '14', '15', '16', '17']
+List1 ['11', '12', '13', '14', '15']
+List2 ['13', '14', '15', '16', '17']
+-----------------------------------------------------------------------------------------------
+2)Method 2: Using * Operator
+Code:
+
+result1 = [*List1, *List2]
+print("concatenation of List 1 and List 2 using * Operator",result1,"\nList1",List1,"\nList2",List2)
+
+Output:
+
+concatenation of List 1 and List 2 using * Operator ['11', '12', '13', '14', '15', '13', '14', '15', '16', '17']
+List1 ['11', '12', '13', '14', '15']
+List2 ['13', '14', '15', '16', '17']
+
+-----------------------------------------------------------------------------------------------
+3)Method 3 : Union of Two list using set()
+Code:
+
+result2 = list(set(List1) | set(List2))
+print("Union of List 1 and List 2 using set()",result2,"\nList1",List1,"\nList2",List2)
+
+Output:
+
+Union of List 1 and List 2 using set() ['13', '12', '15', '11', '16', '17', '14']
+List1 ['11', '12', '13', '14', '15']
+List2 ['13', '14', '15', '16', '17']
+----------------------------------------------------------------------------------------------
+4)Method 4: Using itertools.chain()
+Code:
+
+import itertools
+result3 = list(itertools.chain(List1, List2))
+print("Union of List 1 and List 2 using itertools.chain()",result3,"\nList1",List1,"\nList2",List2)
+
+Output:
+
+Union of List 1 and List 2 using itertools.chain() ['11', '12', '13', '14', '15', '13', '14', '15', '16', '17']
+List1 ['11', '12', '13', '14', '15']
+List2 ['13', '14', '15', '16', '17']
+-------------------------------------------------------------------------------------------------
+5)Method 5: Using Extend Method
+Code:
+
+List1.extend(List2)
+print("Union of List 1 and List 2 using Using Extend Method",List1,"\nList2",List2)
+
+Output:
+
+Union of List 1 and List 2 using Using Extend Method ['11', '12', '13', '14', '15', '13', '14', '15', '16', '17']
+List2 ['13', '14', '15', '16', '17']
+----------------------------------------------------------------------------------------------
+6)Method 6: Using append()
+Code:
+
+for item in List2:
+List1.append(item)
+print("Concatenation of List1 and List2 using append() :", List1)
+
+Output:
+Concatenation of List1 and List2 using append() : 
+['11', '12', '13', '14', '15', '13', '14', '15', '16', '17']

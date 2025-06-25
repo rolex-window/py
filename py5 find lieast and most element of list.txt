@@ -1,0 +1,92 @@
+def count_word(str):
+    str = str.split()
+    str2 = []
+    for i in str:
+        if i not in str2:
+            str2.append(i)
+    ext = str.count(i)
+    for i in str2:
+        print("{} is occured in sen {} times ".format(i,ext))
+def main():
+    str = "Technology has revolutionized the way we live and work, 
+connecting people across the globe like never before. From the 
+of smartphones and social media to the advancement of artificial 
+intelligence and automation, the digital age has brought about significant
+changes in almost every aspect of our daily lives. While these innovations have made 
+many tasks easier and more efficient, they have also raised concerns about privacy, data 
+security, and the impact of constant connectivity on mental health. As we continue to embrace
+new technological developments, it is essential to strike a balance between progress 
+responsibility, ensuring that we use these tools in ways that benefit society as a whole."
+
+    count_word(str)
+if __name__ == '__main__':
+    main()
+
+Output:
+Technology is occured in sen 1 times
+has is occured in sen 2 times
+revolutionized is occured in sen 1 times
+the is occured in sen 6 times
+way is occured in sen 1 times
+we is occured in sen 3 times
+live is occured in sen 1 times
+and is occured in sen 6 times
+work, is occured in sen 1 times
+connecting is occured in sen 1 times
+people is occured in sen 1 times
+across is occured in sen 1 times
+globe is occured in sen 1 times
+like is occured in sen 1 times
+never is occured in sen 1 times
+before. is occured in sen 1 times
+From is occured in sen 1 times
+rise is occured in sen 1 times
+of is occured in sen 4 times
+smartphones is occured in sen 1 times
+social is occured in sen 1 times
+media is occured in sen 1 times
+to is occured in sen 3 times
+advancement is occured in sen 1 times
+
+-------------------------------------------------------------------------------------------------
+Program : For delete odd occurrence
+
+def count_word(input_str):
+    words = input_str.split()
+    unique_words = []
+    word_count = {}
+
+    for word in words:
+        if word not in unique_words:
+            unique_words.append(word)
+
+        if word in word_count:
+            word_count[word] += 1
+
+    else:
+
+        word_count[word] = 1
+
+
+most_common_word = max(word_count, key=word_count.get)
+most_common_count = word_count[most_common_word]
+
+for word in unique_words:
+    print(f"{word} is occurred in sen {word_count[word]} times")
+    print(f"\nThe word with the most occurrences is '{most_common_word}' with {most_common_count} occurrences.")
+
+def main():
+    input_str = "mango apple mango apple potato banana apple"
+    count_word(input_str)
+if __name__ == '__main__':
+    main()
+
+Output:
+mango is occurred in sen 2 times
+apple is occurred in sen 3 times
+potato is occurred in sen 1 times
+banana is occurred in sen 1 times
+The word with the most occurrences is 'apple' with 3 occurrences.
+
+List is ['she', 'i', 'she', 'do', 'svkm', 'she', 'svkm']
+List after Remove element ['she', 'i', 'do', 'svkm', 'she', 'svkm']

@@ -1,0 +1,23 @@
+1. Area of Triangle ------------------------------------------------------
+a=float(input('Enter First Side: ')) 
+b=float(input('Enter Second Side: ')) 
+c=float(input('Enter Third Side: ')) 
+ 
+s=(a+b+c)/2 
+area=(s*(s-a)*(s-b)*(s-c))**0.5 
+print('The Area of the triangle is %0.2f' %area) 
+ 
+2. Area of Circle-----------------------------------------------------------
+ 
+radius = float(input('Enter Radius of Circle: ')) 
+circle_area = 3.14 * radius ** 2
+print('The Area of the Circle is %.2f' % circle_area) 
+
+3. Area of Rectangle-------------------------------------------------------
+ 
+length = float(input('Enter Length of Rectangle: ')) 
+width = float(input('Enter Width of Rectangle: ')) 
+ 
+rectangle_area = length * width 
+ 
+print('The Area of the Rectangle is %.2f' % rectangle_area) 
