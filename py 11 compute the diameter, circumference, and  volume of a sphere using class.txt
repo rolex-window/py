@@ -1,0 +1,25 @@
+Code:
+
+import math 
+class Sphere:
+    def __init__(self, radius): 
+        self.radius = radius 
+    def diameter(self): 
+        return 2 * self.radius 
+    def circumference(self): 
+        return 2 * math.pi * self.radius
+    def volume(self):
+        return (4/3) * math.pi * (self.radius ** 3) 
+
+radius = float(input("Enter the radius of the sphere: ")) 
+sphere = Sphere(radius) 
+
+print("Diameter:", sphere.diameter()) 
+print("Circumference: ",sphere.circumference()) 
+print("Volume: ",sphere.volume())
+
+Output:
+Enter the radius of the sphere: 5.2
+Diameter: 10.4
+Circumference: 32.67256359733385
+Volume: 588.9774131146048

@@ -1,0 +1,50 @@
+Code:
+
+def find_length(l1): 
+    if not l1:
+        return 0 
+    return 1+ find_length(l1[1::2]) + find_length(l1[2::2])
+l1 = [7,33,91,17,88,45,90]
+length = find_length(l1) 
+print("List :", l1)
+print("Length of list :", length)
+
+
+Output:
+List : [7, 33, 91, 17, 88, 45, 90]
+Length of list : 7
+*****************************************************************************************************
+Code:
+
+def flatten_list(nested_list): 
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten_list(item))
+        else: 
+            flat_list.append(item) 
+    return flat_list 
+nested = [1, [2, [3, 4], 5], [6, 7], 8]
+print("Flattened List:", flatten_list(nested))
+
+Output:
+Flattened List: [1, 2, 3, 4, 5, 6, 7, 8]
+********************************************************************************************************
+Code:
+
+def sum_elements_and_remainders(lst, index=0):
+    if index == len(lst): 
+        return (0, 0) 
+    current = lst[index]
+    total_sum, remainder_sum = sum_elements_and_remainders(lst, index + 1) 
+    return (current + total_sum, (current % 2) + remainder_sum)
+
+nums = [4, 7, 10, 3] 
+total, remainder_total = sum_elements_and_remainders(nums) 
+print("Sum of elements:", total) 
+print("Sum of remainders (element % 2):", remainder_total)
+
+
+Output:
+Sum of elements: 24
+Sum of remainders (element % 2): 2

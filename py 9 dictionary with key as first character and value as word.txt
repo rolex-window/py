@@ -1,0 +1,74 @@
+Code:
+
+def create_dictionary(str): 
+    str = str.split()
+    dict = {}
+    for word in str:
+        if word[0] not in dict.keys(): 
+            dict[word[0]] = []
+            dict[word[0]].append(word)
+        else:
+            if word not in dict[word[0]]: 
+                dict[word[0]].append9(word)
+    return dict
+if name == ' main ':
+    str = input("Enter the string = ")
+    print("Dictionary with first character as key and word as value ")
+    print(create_dictionary(str))
+
+Output:
+
+Enter the string = Hi my name is svkm
+Dictionary with first character as key and word as value
+{'H': ['Hi'], 'm': ['my'], 'n': ['name'], 'i': ['is'], 's': ['svkm']}
+***************************************************************************************************************
+Code:
+
+def create_student_record(serial, name, age, grade):
+
+    student_record = { 
+        'Name': name,
+        'Age': age, 
+        'Grade': grade
+
+    }
+    students_data[serial] = student_record
+
+students_data = {}
+create_student_record(1, 'Durgesh sonwane', 20, 'A')
+create_student_record(2, 'Yash patil', 17, 'B')
+create_student_record(3, 'Kalpesh patil', 15, 'A') 
+create_student_record(4, 'Bhavesh patil', 18, 'C')
+
+print("Student Records (Serial Number as Key):") 
+for serial, record in students_data.items():
+    print(f"Serial No: {serial}, Name: {record['Name']}, Age: {record['Age']}, Grade:{record['Grade']}")
+
+Output:
+
+Student Records (Serial Number as Key):
+Serial No: 1, Name: Durgesh sonwane, Age: 20, Grade: A 
+Serial No: 2, Name: Yash patil, Age: 17, Grade: B 
+Serial No: 3, Name: Kalpesh patil, Age: 15, Grade: A 
+Serial No: 4, Name: Bhavesh patil, Age: 18, Grade: C
+******************************************************************************************************************
+Code:
+
+def create_nested_dict(string): 
+    words = string.split() 
+    nested_dict = {}
+
+    for word in words:
+        first_letter = word[0].lower()
+        word_count = word.count(word) 
+        if first_letter not in nested_dict:
+            nested_dict[first_letter]={} 
+            nested_dict[first_letter][word] = word_count
+        return nested_dict
+
+    input_string = "apple banana apple banana cherry "
+    result = create_nested_dict(input_string) 
+    print(result)
+
+
+Output:{'a': {'apple': 1}, 'b': {'banana': 1}, 'c': {'cherry': 1}}

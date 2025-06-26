@@ -1,0 +1,43 @@
+Code:
+
+test_string=input("Enter string:")
+l=[]
+l=test_string.split()
+wordfreq=[l.count(p) for p in l]
+print(dict(zip(l,wordfreq)))
+
+Output:
+Enter string:Life is full of moments, moments that........(theory)
+
+Dictionary with words and their frequency :
+{'Life': 2, 'is': 8, 'full': 1, 'of': 34, 'moments,': 6, 'moments': 38,
+ 'that': 5, 'define': 5, 'who': 2, 'we': 11, 'are,': 1, 'shape': 1, 'become,': 1,......}
+**************************************************************************************************************
+Code:
+
+def count_word(str):
+    str = str.split()
+    unique_word =[]
+    count_list = []
+    word_dict = {}
+    for i in str:
+        if i not in unique_word:
+            unique_word.append(i)
+    for i in unique_word:
+        c = str.count(i)
+        count_list.append(c)
+    for i in range(len(unique_word)):
+        word_dict[unique_word[i]] = count_list[i]
+    return word_dict
+if __name__ == "__main__":
+    text = "Life is full of moments, moments that define...............(add theory).....
+    
+    print("Dictionary with words and their frequency :")
+    print(count_word(text))
+
+
+Output:
+Enter string:Life is full of moments, moments.........(theory)
+Dictionary with words and their frequency :
+
+{'Life': 2, 'is': 8, 'full': 1, 'of': 34, 'moments,': 6, 'moments': 38, 'that': 5,............}

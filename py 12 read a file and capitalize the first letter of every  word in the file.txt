@@ -1,0 +1,18 @@
+Code:
+
+file_name=open('D:/tst.txt','r')
+for 1 in file name:
+p=l.title()
+print (p)
+
+................................paragram print here...............................
+
+Task :
+
+file_name = open('D:/tst.txt', 'r')
+for l in file_name:
+p = ' '.join([word.capitalize() for word in l.split()])
+print(p)
+file_name.close()
+
+............................same above paragraph print here..........................
